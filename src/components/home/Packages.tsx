@@ -1,0 +1,79 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, ArrowRight } from 'lucide-react';
+import { Button } from '../Button';
+
+const PackageCard = ({ title, price, features, cta, isPopular, delay }: any) => (
+    <motion.div
+        className={`relative bg-rocket-card border ${isPopular ? 'border-rocket-cyan shadow-[0_0_30px_rgba(0,217,255,0.2)]' : 'border-white/10'} rounded-2xl p-8 flex flex-col`}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay }}
+    >
+        {isPopular && (
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-rocket-cyan text-rocket-dark font-bold text-xs uppercase px-3 py-1 rounded-full">
+                Most Popular
+            </div>
+        )}
+        <h3 className="font-title text-2xl text-white uppercase mb-2">{title}</h3>
+        <div className="text-4xl font-bold text-white mb-6">{price}</div>
+
+        <ul className="space-y-4 mb-8 flex-1">
+            {features.map((feature: string, i: number) => (
+                <li key={i} className="flex items-start gap-3 text-white/80 text-sm">
+                    <Check className="w-5 h-5 text-rocket-cyan shrink-0" />
+                    {feature}
+                </li>
+            ))}
+        </ul>
+
+        <a href="#FIVERR_LINK" target="_blank" rel="noopener noreferrer" className="block">
+            <Button variant={isPopular ? 'primary' : 'secondary'} className="w-full" rightIcon={<ArrowRight size={16} />}>
+                {cta}
+            </Button>
+        </a>
+    </motion.div>
+);
+
+export const Packages = () => {
+    return (
+        <section id="coaching-plans" className="py-24 bg-rocket-dark relative">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">Coaching Packages</h2>
+                    <p className="text-rocket-textSecondary">Simple pricing. No subscriptions. Book securely via Fiverr.</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <PackageCard
+                        title="Single Session"
+                        price="$29"
+                        features={[
+                            "60 Minutes 1-on-1 Coaching",
+                            "Live Replay Analysis or 2v2 Play",
+                            "Real-time Voice Feedback (Discord)",
+                            "Post-Session Written Notes"
+                        ]}
+                        cta="Book on Fiverr"
+                        delay={0.2}
+                    />
+                    <PackageCard
+                        title="Rank Up Bundle"
+                        price="$80"
+                        isPopular
+                        features={[
+                            "3 x 60 Minute Sessions",
+                            "Comprehensive Improvement Plan",
+                            "Week-by-Week Progress Tracking",
+                            "Priority Scheduling",
+                            "Direct Chat Support"
+                        ]}
+                        cta="View Bundle"
+                        delay={0.4}
+                    />
+                </div>
+            </div>
+        </section>
+    );
+};

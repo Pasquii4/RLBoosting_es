@@ -1,0 +1,44 @@
+{
+    "coach": {
+        "name": "GC Coach",
+        "rank": "Grand Champion III",
+        "winRate": 87.5,
+        "totalSessions": 342,
+        "activeStudents": 28,
+        "hoursCoached": 856
+    },
+    "students": [
+        {
+            "id": 1,
+            "name": "Player1",
+            "currentRank": "Diamond II",
+            "previousRank": "Platinum III",
+            "hoursCoached": 12,
+            "improvement": "+2 ranks"
+        },
+        {
+            "id": 2,
+            "name": "Player2",
+            "currentRank": "Champion I",
+            "previousRank": "Diamond III",
+            "hoursCoached": 18,
+            "improvement": "+1 rank"
+        },
+        {
+            "id": 3,
+            "name": "Player3",
+            "currentRank": "Grand Champion I",
+            "previousRank": "Champion III",
+            "hoursCoached": 24,
+            "improvement": "+1 rank"
+        },
+        {
+            "id": 4,
+            "name": "Player4",
+            "currentRank": "Platinum II",
+            "previousRank": "Gold III",
+            "hoursCoached": 8,
+            "improvement": "+2 ranks"
+        }
+    ]
+}
