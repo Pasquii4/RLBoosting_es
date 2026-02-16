@@ -24,7 +24,6 @@ export const Navbar = () => {
 
     const navLinks = [
         { name: 'Inicio', path: '/', icon: <Home size={18} /> },
-        { name: 'Coaching', path: '/#coaching-plans', icon: <Rocket size={18} /> },
         { name: 'Tracker', path: '/tracker', icon: <BarChart2 size={18} /> },
         { name: 'Comunidad', path: '/community', icon: <Users size={18} /> },
     ];
@@ -33,7 +32,7 @@ export const Navbar = () => {
         <nav
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-300",
-                scrolled ? "bg-rocket-dark/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-white/5 py-3" : "bg-transparent py-6"
+                scrolled ? "bg-rocket-dark/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-white/5 py-3" : "bg-transparent py-6"
             )}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">

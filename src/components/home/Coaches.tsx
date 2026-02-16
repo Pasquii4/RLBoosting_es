@@ -64,7 +64,7 @@ const coaches: CoachData[] = [
             { mode: "Tournaments", rank: "Grand Champion I", mmr: 1497 }
         ],
         trackerUrl: "https://rocketleague.tracker.network/rocket-league/profile/epic/Azotedelosrojos/overview",
-        image: "/images/coach-azote.jpg",
+        image: "from-purple-500 to-pink-500",
         availability: "Lunes a Viernes: 18:00-23:00 CET",
         languages: ["Español"],
         description: "Especialista en Doubles 2v2 con enfoque en rotaciones perfectas y posicionamiento defensivo. Mi metodología se basa en mejorar tu game sense y toma de decisiones rápidas."
@@ -94,7 +94,7 @@ const coaches: CoachData[] = [
             { mode: "Tournaments", rank: "Grand Champion I", mmr: 1536 }
         ],
         trackerUrl: "https://rocketleague.tracker.network/rocket-league/profile/epic/FusilaYComulga19/overview",
-        image: "/images/coach-fusila.jpg",
+        image: "from-blue-500 to-cyan-500",
         availability: "Lunes a Domingo: 16:00-22:00 CET",
         languages: ["Español"],
         achievements: ["Marathoner", "Hero", "Streak I"],
@@ -112,14 +112,22 @@ const CoachProfile = ({ coach, index }: { coach: CoachData; index: number }) => 
     >
         {/* Header */}
         <div className="flex flex-col md:flex-row gap-6 mb-8 items-center md:items-start">
-            <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full border-2 border-rocket-cyan flex items-center justify-center shrink-0 overflow-hidden relative shadow-[0_0_20px_rgba(0,217,255,0.2)]">
-                <span className="text-4xl">🚀</span>
+            <div className="relative">
+                <div className={`w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br ${coach.image} rounded-full border-2 border-white/20 flex items-center justify-center shrink-0 overflow-hidden relative shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+                    <Trophy size={40} className="text-white drop-shadow-md" />
+                </div>
+                <div className="absolute -bottom-2 -right-2 bg-rocket-dark border border-rocket-cyan/30 px-2 py-1 rounded-md shadow-xl flex flex-col items-center">
+                    <span className="text-[10px] text-rocket-textSecondary uppercase font-bold leading-none">MMR</span>
+                    <span className="text-sm font-bold text-white leading-none">{coach.mmr}</span>
+                </div>
             </div>
+
             <div className="text-center md:text-left flex-1">
                 <h3 className="font-title text-2xl md:text-3xl text-white mb-2">{coach.name}</h3>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-3">
-                    <span className="bg-rocket-cyan/10 text-rocket-cyan text-xs font-bold px-3 py-1 rounded-full border border-rocket-cyan/20">
-                        {coach.rank} ({coach.mmr} MMR)
+                    <span className="bg-rocket-cyan/10 text-rocket-cyan text-xs font-bold px-3 py-1 rounded-full border border-rocket-cyan/20 flex items-center gap-1">
+                        <Award size={12} />
+                        {coach.rank}
                     </span>
                     <span className="bg-purple-500/10 text-purple-400 text-xs font-bold px-3 py-1 rounded-full border border-purple-500/20">
                         Peak: {coach.peakRank}

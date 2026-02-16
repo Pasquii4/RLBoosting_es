@@ -50,16 +50,36 @@ export const FAQ = () => {
             answer: "Cada sesión incluye análisis de gameplay en vivo, corrección de errores en tiempo real, entrenamientos de mecánicas, coaching de mentalidad, y notas personalizadas post-sesión con un plan de mejora."
         },
         {
+            question: "¿Qué rangos han conseguido vuestros clientes?",
+            answer: "Hemos llevado a jugadores desde Oro hasta Diamante, y de Diamante a Grand Champion. La mejora depende de tu dedicación, pero te damos las herramientas exactas para lograrlo."
+        },
+        {
+            question: "¿Cuánto tiempo tardaré en subir de rango?",
+            answer: "¡Depende de cuánto practiques! Nuestros alumnos suelen ver mejoras inmediatas en su posicionamiento, y subir de rango en las semanas siguientes tras aplicar nuestros consejos."
+        },
+        {
+            question: "¿Hacéis boosting (jugar por mí) o solo coaching?",
+            answer: "Ofrecemos ambas opciones. El coaching te enseña a mejorar por ti mismo, mientras que el boosting (Rank Up) implica que jugamos en tu cuenta o contigo para subirte de rango. Consulta los detalles en Fiverr."
+        },
+        {
+            question: "¿Qué pasa si tengo lag o problemas técnicos?",
+            answer: "Sin problema. Si hay problemas técnicos graves que impiden la sesión, la reprogramaremos para otro momento sin coste adicional."
+        },
+        {
+            question: "¿Puedo grabar la sesión?",
+            answer: "¡Por supuesto! Recomendamos grabar la sesión para que puedas repasar los consejos y correcciones más tarde. Es una excelente forma de acelerar tu aprendizaje."
+        },
+        {
             question: "¿Puedo cancelar o reprogramar mi sesión?",
             answer: "Sí. Ofrecemos cancelación gratuita hasta 6 horas antes de la sesión programada. Para reprogramar, simplemente contáctanos por Discord con anticipación."
         },
         {
-            question: "¿Ofrecen garantía de resultados?",
-            answer: "Si bien no podemos garantizar un rango específico (depende de tu práctica), garantizamos que identificaremos exactamente qué te está frenando y te daremos un plan claro para mejorar. Si no estás satisfecho con la sesión, contáctanos para una solución."
-        },
-        {
             question: "¿En qué idioma son las sesiones?",
             answer: "Ofrecemos sesiones en español e inglés. Especifica tu preferencia al reservar en Fiverr o al coordinar la sesión por Discord."
+        },
+        {
+            question: "¿Ofrecen garantía de resultados?",
+            answer: "Si bien no podemos garantizar un rango específico (depende de tu práctica), garantizamos que identificaremos exactamente qué te está frenando y te daremos un plan claro para mejorar. Si no estás satisfecho con la sesión, contáctanos para una solución."
         }
     ];
 

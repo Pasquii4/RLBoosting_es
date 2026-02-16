@@ -1,13 +1,10 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '../Button';
 import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-    const y2 = useTransform(scrollY, [0, 500], [0, -150]);
 
     return (
         <section ref={containerRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-rocket-dark">
@@ -41,7 +38,6 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    style={{ y: y2 }}
                 >
                     ALCANZA <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-rocket-blue via-rocket-cyan to-white">
@@ -54,7 +50,6 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    style={{ y: y1 }}
                 >
                     Coaching 1-on-1 con dos jugadores Grand Champion 2 (1600 MMR).<br />
                     Más de 4000 horas de experiencia. Jugamos contigo, corregimos tus errores y te ayudamos a subir.
@@ -66,9 +61,9 @@ export const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                 >
-                    <a href="https://www.fiverr.com/rlboosting_es" target="_blank" rel="noopener noreferrer">
+                    <a href="https://es.fiverr.com/rlboosting_es/consigamos-tu-rango-deseado-en-rocket-league-85b1" target="_blank" rel="noopener noreferrer">
                         <Button size="lg" rightIcon={<ArrowRight size={20} />}>
-                            Reservar en Fiverr ($29)
+                            RESERVAR DESDE 8,85€
                         </Button>
                     </a>
                     <a href="#coaching-plans">

@@ -30,7 +30,7 @@ export const CommunityHero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    El Hub Definitivo <br />
+                    La Comunidad N°1 <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5865F2] to-rocket-cyan">De Rocket League</span>
                 </motion.h1>
 
@@ -40,8 +40,8 @@ export const CommunityHero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    Conecta con jugadores, encuentra compañeros y compite en torneos semanales.
-                    La comunidad que sube de nivel junta.
+                    Conecta con jugadores de tu nivel, encuentra equipo y participa en torneos exclusivos.
+                    Tu rango empieza a subir aquí.
                 </motion.p>
 
                 <motion.div

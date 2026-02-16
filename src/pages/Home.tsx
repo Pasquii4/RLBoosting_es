@@ -3,7 +3,9 @@ import { Hero } from '../components/home/Hero';
 import { Coaches } from '../components/home/Coaches';
 import { Process } from '../components/home/Process';
 import { Benefits } from '../components/home/Benefits';
+import { Testimonials } from '../components/home/Testimonials';
 import { Packages } from '../components/home/Packages';
+import { WhyUs } from '../components/home/WhyUs';
 import { FAQ } from '../components/home/FAQ';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -17,7 +19,9 @@ export default function Home() {
                 <Coaches />
                 <Process />
                 <Benefits />
+                <Testimonials />
                 <Packages />
+                <WhyUs />
                 <FAQ />
             </main>
             <Footer />

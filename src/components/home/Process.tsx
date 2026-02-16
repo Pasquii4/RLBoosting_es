@@ -37,29 +37,29 @@ export const Process = () => {
                     <Step
                         number="1"
                         icon={<Calendar size={32} />}
-                        title="Reserva en Fiverr"
-                        description="Elige tu paquete y asegura tu lugar en Fiverr."
+                        title="Reserva Tu Slot"
+                        description="Elige tu paquete en Fiverr y asegura tu sesión de coaching."
                         delay={0.2}
                     />
                     <Step
                         number="2"
                         icon={<MessageSquare size={32} />}
-                        title="Coordinamos"
-                        description="Agendamos un horario que te funcione vía Discord."
+                        title="Setup en Discord"
+                        description="Coordinamos horario y servidor. Añadimos tu ID de Epic."
                         delay={0.4}
                     />
                     <Step
                         number="3"
                         icon={<Gamepad2 size={32} />}
-                        title="Juega y Aprende"
-                        description="Sesión 1-on-1. Jugamos juntos y corregimos errores en vivo."
+                        title="Live Coaching"
+                        description="Análisis de replay o juego en vivo. Feedback instantáneo por voz."
                         delay={0.6}
                     />
                     <Step
                         number="4"
                         icon={<TrendingUp size={32} />}
-                        title="Mejora"
-                        description="Recibes notas personalizadas y un plan de entrenamiento."
+                        title="Rank Up"
+                        description="Recibe tus notas post-sesión y empieza a subir de MMR."
                         delay={0.8}
                     />
                 </div>

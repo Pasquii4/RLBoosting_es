@@ -1,27 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { MMRChart } from '../components/tracker/MMRChart';
 import { WinLossChart } from '../components/tracker/WinLossChart';
-import { RecentSessions } from '../components/tracker/RecentSessions';
-import { PerformanceTracker } from '../components/tracker/PerformanceTracker';
 import { motion } from 'framer-motion';
-import { Trophy, Gamepad2, Target } from 'lucide-react';
+import { Trophy, Gamepad2, Target, ChevronDown } from 'lucide-react';
+import { coachesData } from '../data/coaches';
 
 export default function Tracker() {
+    const [selectedCoachId, setSelectedCoachId] = useState<'azotedelosrojos' | 'fusilaYComulga19'>('azotedelosrojos');
+    const coach = coachesData[selectedCoachId];
+
     return (
         <div className="min-h-screen bg-rocket-dark text-white selection:bg-rocket-cyan/30">
             <Navbar />
 
             <main className="pt-32 pb-20 px-6 container mx-auto">
-                <PerformanceTracker />
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-white/5 pb-8 gap-6 mt-12 relative">
+                    {/* Coach Badge / Selector */}
+                    <div className="absolute -top-10 left-0 flex items-center gap-4">
+                        <div className="bg-rocket-cyan/10 border border-rocket-cyan/20 text-rocket-cyan px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2">
+                            <Trophy size={14} />
+                            Viendo perfil de: {coach.username}
+                        </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-white/5 pb-8 gap-6 mt-12">
+                        <div className="flex bg-white/5 rounded-lg p-1 border border-white/10">
+                            <button
+                                onClick={() => setSelectedCoachId('azotedelosrojos')}
+                                className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${selectedCoachId === 'azotedelosrojos' ? 'bg-rocket-cyan text-rocket-dark' : 'text-white/50 hover:text-white'}`}
+                            >
+                                Azote
+                            </button>
+                            <button
+                                onClick={() => setSelectedCoachId('fusilaYComulga19')}
+                                className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${selectedCoachId === 'fusilaYComulga19' ? 'bg-rocket-cyan text-rocket-dark' : 'text-white/50 hover:text-white'}`}
+                            >
+                                Fusila
+                            </button>
+                        </div>
+                    </div>
+
                     <div>
                         <motion.h1
                             className="text-5xl md:text-7xl font-title font-bold italic text-white mb-2"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            key={selectedCoachId} // Re-animate on change
                         >
                             TRACKER DE <span className="text-transparent bg-clip-text bg-gradient-to-r from-rocket-blue to-rocket-cyan">RENDIMIENTO</span>
                         </motion.h1>
@@ -31,7 +54,7 @@ export default function Tracker() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
                         >
-                            Analiza tu historial competitivo, monitorea tendencias de MMR e identifica áreas de mejora.
+                            Analiza las estadísticas reales de nuestros coaches. Datos verificados de Tracker Network.
                         </motion.p>
                     </div>
 
@@ -39,7 +62,7 @@ export default function Tracker() {
                         {['1S', '1M', '3M', 'TODO'].map((period, i) => (
                             <button
                                 key={period}
-                                className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${i === 1 ? 'bg-rocket-cyan text-rocket-dark' : 'bg-white/5 text-white/50 hover:bg-white/10 hover:text-white'}`}
+                                className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${i === 3 ? 'bg-rocket-cyan text-rocket-dark' : 'bg-white/5 text-white/50 hover:bg-white/10 hover:text-white'}`}
                             >
                                 {period}
                             </button>
@@ -50,29 +73,33 @@ export default function Tracker() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Main Stats Area */}
                     <div className="lg:col-span-2 space-y-8">
-                        {/* MMR Chart */}
-                        <motion.div
-                            className="bg-rocket-card border border-rocket-border rounded-2xl p-6 md:p-8 relative overflow-hidden"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            <div className="flex justify-between items-center mb-6">
-                                <h2 className="font-title font-bold text-2xl text-white">Historial MMR</h2>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-green-400 font-bold font-mono text-lg">+102</span>
-                                    <span className="text-gray-400 text-xs uppercase">Este Mes</span>
-                                </div>
-                            </div>
-                            <MMRChart />
-                        </motion.div>
-
                         {/* Quick Stats Row */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
-                                { label: 'Rango Actual', value: 'GC II', icon: <Trophy size={20} className="text-rocket-orange" />, sub: 'Div IV', progress: 85, color: 'bg-rocket-orange' },
-                                { label: 'Partidas', value: '1,248', icon: <Gamepad2 size={20} className="text-rocket-blue" />, sub: '+12 esta semana', progress: 60, color: 'bg-rocket-blue' },
-                                { label: '% Tiro', value: '42.8%', icon: <Target size={20} className="text-rocket-cyan" />, sub: 'Top 8%', progress: 42, color: 'bg-rocket-cyan' },
+                                {
+                                    label: 'Rango Actual',
+                                    value: 'GC I',
+                                    icon: <Trophy size={20} className="text-rocket-orange" />,
+                                    sub: `Div ${coach.currentRanks.rankedDoubles2v2.division} (${coach.currentRanks.rankedDoubles2v2.mmr})`,
+                                    progress: 92,
+                                    color: 'bg-rocket-orange'
+                                },
+                                {
+                                    label: 'Victorias',
+                                    value: coach.lifetimeStats.wins.value.toLocaleString(),
+                                    icon: <Gamepad2 size={20} className="text-rocket-blue" />,
+                                    sub: coach.lifetimeStats.wins.percentile,
+                                    progress: 87,
+                                    color: 'bg-rocket-blue'
+                                },
+                                {
+                                    label: 'Goles',
+                                    value: coach.lifetimeStats.goals.value.toLocaleString(),
+                                    icon: <Target size={20} className="text-rocket-cyan" />,
+                                    sub: coach.lifetimeStats.goals.percentile,
+                                    progress: 86,
+                                    color: 'bg-rocket-cyan'
+                                },
                             ].map((stat, i) => (
                                 <motion.div
                                     key={i}
@@ -111,30 +138,20 @@ export default function Tracker() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
                         >
-                            <h2 className="font-title font-bold text-2xl text-white mb-6 w-full text-left">Win Rate</h2>
+                            <h2 className="font-title font-bold text-2xl text-white mb-6 w-full text-left">Stats Globales</h2>
                             <WinLossChart />
                             <div className="flex gap-8 mt-6 w-full justify-center">
                                 <div className="text-center">
                                     <div className="w-3 h-3 rounded-full bg-rocket-cyan mx-auto mb-2 shadow-[0_0_10px_#00D9FF]" />
-                                    <span className="block font-bold text-xl text-white">62</span>
-                                    <span className="text-xs text-gray-400 uppercase">Victorias</span>
+                                    <span className="block font-bold text-xl text-white">~55%</span>
+                                    <span className="text-xs text-gray-400 uppercase">Win Rate Est.</span>
                                 </div>
                                 <div className="text-center">
                                     <div className="w-3 h-3 rounded-full bg-rocket-orange mx-auto mb-2 shadow-[0_0_10px_#FF6B00]" />
-                                    <span className="block font-bold text-xl text-white">38</span>
-                                    <span className="text-xs text-gray-400 uppercase">Derrotas</span>
+                                    <span className="block font-bold text-xl text-white">{coach.lifetimeStats.mvps.value}</span>
+                                    <span className="text-xs text-gray-400 uppercase">MVPs</span>
                                 </div>
                             </div>
-                        </motion.div>
-
-                        {/* Recent Sessions */}
-                        <motion.div
-                            className="bg-rocket-card border border-rocket-border rounded-2xl p-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
-                        >
-                            <RecentSessions />
                         </motion.div>
                     </div>
                 </div>

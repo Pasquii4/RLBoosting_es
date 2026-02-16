@@ -34,22 +34,22 @@ export const Benefits = () => {
                             <BenefitItem
                                 icon={<Brain />}
                                 title="Game Sense"
-                                description="Aprende exactamente cuándo desafiar, cuándo hacer shadow, y cómo leer la jugada."
+                                description="Aprende exactamente cuándo desafiar, domina el shadow defense y gana tus 50/50s."
                             />
                             <BenefitItem
                                 icon={<RotateCcw />}
                                 title="Rotaciones"
-                                description="Deja de cortar el camino a tus compañeros. Fluye sin problemas por el campo."
+                                description="Entiende tu rol como last back, mantén la upfield pressure y rota al backpost."
                             />
                             <BenefitItem
                                 icon={<Zap />}
                                 title="Mecánicas"
-                                description="Domina aerials rápidos, wall-drags y recuperaciones con entrenamientos personalizados."
+                                description="Perfecciona tus fast aerials, flip resets, y ceiling shots con ejercicios específicos."
                             />
                             <BenefitItem
                                 icon={<Shield />}
                                 title="Defensa"
-                                description="Conviértete en una muralla. Lecturas de backboard y salvadas difíciles hechas fácil."
+                                description="Conviértete en una muralla. Lecturas de backboard, salvadas in-extremis y control de boost."
                             />
                         </div>
                     </motion.div>
