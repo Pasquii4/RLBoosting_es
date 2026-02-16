@@ -1,1 +1,0 @@
-import{j as s}from"./index-DwaVvbTK.js";import{N as r,F as e}from"./Footer-BEqqA3rX.js";import{P as a}from"./Packages-CsX0BDul.js";function c(){return s.jsxs("div",{className:"min-h-screen bg-rocket-dark text-white selection:bg-rocket-cyan/30",children:[s.jsx(r,{}),s.jsx("main",{className:"pt-20",children:s.jsx(a,{})}),s.jsx(e,{})]})}export{c as default};

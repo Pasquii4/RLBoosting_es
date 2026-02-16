@@ -172,7 +172,7 @@ export const PerformanceTracker = () => {
                                             <div className="flex gap-3">
                                                 <Button
                                                     onClick={copyToClipboard}
-                                                    variant="outline"
+                                                    variant="secondary"
                                                     className="flex-1"
                                                     leftIcon={copied ? <Check size={16} /> : <Copy size={16} />}
                                                 >
