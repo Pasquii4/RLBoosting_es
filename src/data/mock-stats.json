@@ -1,44 +1,44 @@
 {
     "coach": {
-        "name": "GC Coach",
-        "rank": "Grand Champion III",
-        "winRate": 87.5,
-        "totalSessions": 342,
-        "activeStudents": 28,
-        "hoursCoached": 856
+        "name": "Rocket League Coaching",
+        "rank": "Gran Campeón II",
+        "winRate": 68,
+        "totalSessions": 500,
+        "activeStudents": 150,
+        "hoursCoached": 8000
     },
     "students": [
         {
             "id": 1,
-            "name": "Player1",
-            "currentRank": "Diamond II",
-            "previousRank": "Platinum III",
+            "name": "Alumno 1",
+            "currentRank": "Diamante II",
+            "previousRank": "Platino III",
             "hoursCoached": 12,
-            "improvement": "+2 ranks"
+            "improvement": "+2 rangos"
         },
         {
             "id": 2,
-            "name": "Player2",
-            "currentRank": "Champion I",
-            "previousRank": "Diamond III",
+            "name": "Alumno 2",
+            "currentRank": "Campeón I",
+            "previousRank": "Diamante III",
             "hoursCoached": 18,
-            "improvement": "+1 rank"
+            "improvement": "+1 rango"
         },
         {
             "id": 3,
-            "name": "Player3",
-            "currentRank": "Grand Champion I",
-            "previousRank": "Champion III",
+            "name": "Alumno 3",
+            "currentRank": "Gran Campeón I",
+            "previousRank": "Campeón III",
             "hoursCoached": 24,
-            "improvement": "+1 rank"
+            "improvement": "+1 rango"
         },
         {
             "id": 4,
-            "name": "Player4",
-            "currentRank": "Platinum II",
-            "previousRank": "Gold III",
+            "name": "Alumno 4",
+            "currentRank": "Platino II",
+            "previousRank": "Oro III",
             "hoursCoached": 8,
-            "improvement": "+2 ranks"
+            "improvement": "+2 rangos"
         }
     ]
 }

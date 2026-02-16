@@ -10,8 +10,8 @@ const CoachProfile = ({ name, rank, hours, experience, style, delay }: any) => (
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay }}
     >
-        <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full mx-auto mb-6 border-2 border-rocket-cyan flex items-center justify-center">
-            <span className="text-3xl">👨‍🚀</span>
+        <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full mx-auto mb-6 border-2 border-rocket-cyan flex items-center justify-center overflow-hidden relative">
+            <span className="text-3xl z-10">🚀</span>
         </div>
         <h3 className="font-title text-2xl text-center text-white mb-2">{name}</h3>
         <div className="flex justify-center gap-2 mb-6 text-rocket-cyan">
@@ -55,25 +55,25 @@ export const Coaches = () => {
                         Conoce a tus Coaches
                     </motion.h2>
                     <p className="text-rocket-textSecondary max-w-2xl mx-auto">
-                        Aprende de los mejores. Nuestros coaches con rango GC2 tienen miles de horas de experiencia para ayudarte a escalar.
+                        Aprende de jugadores experimentados. Con rango Gran Campeón II y miles de horas de experiencia para ayudarte a escalar.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <CoachProfile
-                        name="Coach Alpha"
-                        rank="Grand Champion 2 (1600 MMR)"
+                        name="Azotedelosrojos"
+                        rank="Gran Campeón II (1600 MMR)"
                         hours="4000+"
                         experience="9 Años"
-                        style="Analítico y estratégico. Te enseño a pensar antes de volar."
+                        style="Enfoque analítico y posicional. Aprende a leer el juego y dominar el campo."
                         delay={0.2}
                     />
                     <CoachProfile
-                        name="Coach Bravo"
-                        rank="Grand Champion 2 (1600 MMR)"
+                        name="FusilaYComulga19"
+                        rank="Gran Campeón II (1600 MMR)"
                         hours="4000+"
                         experience="9 Años"
-                        style="Mecánicas y rotaciones. Pulimos tu control del coche y del balón."
+                        style="Maestría mecánica y control aéreo. Perfecciona tu técnica y consistencia."
                         delay={0.4}
                     />
                 </div>

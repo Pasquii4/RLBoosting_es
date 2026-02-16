@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { Gamepad2, Trophy, Disc } from 'lucide-react';
+import { Gamepad2, Trophy, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { StatsSkeleton } from './StatsSkeleton';
 
@@ -46,10 +46,10 @@ export const Stats = ({ isLoading = false }: { isLoading?: boolean }) => {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
                         <div className="text-center md:text-left">
                             <h2 className="font-title font-bold text-3xl md:text-5xl text-white mb-2 italic">
-                                GRAND CHAMPION II
+                                GRAN CAMPEÓN II
                             </h2>
                             <div className="flex items-center gap-3 justify-center md:justify-start">
-                                <span className="text-rocket-cyan font-bold text-xl">MMR: 1642</span>
+                                <span className="text-rocket-cyan font-bold text-xl">MMR: 1600</span>
                                 <span className="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded-full border border-green-500/30">
                                     TOP 0.4%
                                 </span>
@@ -69,21 +69,23 @@ export const Stats = ({ isLoading = false }: { isLoading?: boolean }) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                     <StatCard
                         icon={<Gamepad2 size={32} />}
-                        label="Games Analyzed"
-                        value={142}
+                        label="Partidas Analizadas"
+                        value={500}
+                        suffix="+"
                         delay={0.2}
                     />
                     <StatCard
                         icon={<Trophy size={32} />}
                         label="Win Rate"
-                        value={62}
+                        value={68}
                         suffix="%"
                         delay={0.4}
                     />
                     <StatCard
-                        icon={<Disc size={32} />}
-                        label="Goals / Game"
-                        value={2.4}
+                        icon={<Users size={32} />}
+                        label="Estudiantes"
+                        value={150}
+                        suffix="+"
                         delay={0.6}
                     />
                 </div>

@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer';
 import { MMRChart } from '../components/tracker/MMRChart';
 import { WinLossChart } from '../components/tracker/WinLossChart';
 import { RecentSessions } from '../components/tracker/RecentSessions';
+import { PerformanceTracker } from '../components/tracker/PerformanceTracker';
 import { motion } from 'framer-motion';
 import { Trophy, Gamepad2, Target } from 'lucide-react';
 
@@ -13,7 +14,9 @@ export default function Tracker() {
             <Navbar />
 
             <main className="pt-32 pb-20 px-6 container mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-white/5 pb-8 gap-6">
+                <PerformanceTracker />
+
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-white/5 pb-8 gap-6 mt-12">
                     <div>
                         <motion.h1
                             className="text-5xl md:text-7xl font-title font-bold italic text-white mb-2"

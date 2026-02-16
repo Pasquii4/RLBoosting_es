@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '../Button';
 
-const PackageCard = ({ title, price, features, cta, isPopular, delay }: any) => (
+const PackageCard = ({ title, price, duration, features, cta, isPopular, delay }: any) => (
     <motion.div
         className={`relative bg-rocket-card border ${isPopular ? 'border-rocket-cyan shadow-[0_0_30px_rgba(0,217,255,0.2)]' : 'border-white/10'} rounded-2xl p-8 flex flex-col`}
         initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,8 @@ const PackageCard = ({ title, price, features, cta, isPopular, delay }: any) => 
                 Más Popular
             </div>
         )}
-        <h3 className="font-title text-2xl text-white uppercase mb-2">{title}</h3>
+        <h3 className="font-title text-2xl text-white uppercase mb-1">{title}</h3>
+        <p className="text-white/60 text-sm mb-4 font-mono">{duration}</p>
         <div className="text-4xl font-bold text-white mb-6">{price}</div>
 
         <ul className="space-y-4 mb-8 flex-1">
@@ -28,7 +29,7 @@ const PackageCard = ({ title, price, features, cta, isPopular, delay }: any) => 
             ))}
         </ul>
 
-        <a href="https://www.fiverr.com/rlboosting_es" target="_blank" rel="noopener noreferrer" className="block">
+        <a href="https://es.fiverr.com/rlboosting_es/consigamos-tu-rango-deseado-en-rocket-league-85b1" target="_blank" rel="noopener noreferrer" className="block mt-auto">
             <Button variant={isPopular ? 'primary' : 'secondary'} className="w-full" rightIcon={<ArrowRight size={16} />}>
                 {cta}
             </Button>
@@ -42,36 +43,60 @@ export const Packages = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">Paquetes de Coaching</h2>
-                    <p className="text-rocket-textSecondary">Precios simples. Sin suscripciones. Reserva de forma segura en Fiverr.</p>
+                    <p className="text-rocket-textSecondary">Precios transparentes. Sin suscripciones. Reserva segura a través de Fiverr.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <PackageCard
-                        title="Sesión Individual"
-                        price="$29"
+                        title="Básico"
+                        price="8,85€"
+                        duration="30 Minutos"
                         features={[
-                            "60 minutos de coaching 1-on-1",
-                            "Análisis de replays en vivo o 2v2",
-                            "Feedback por voz en tiempo real (Discord)",
-                            "Notas escritas después de la sesión"
+                            "Sesión de coaching 1 a 1",
+                            "Análisis de replay en vivo",
+                            "Retroalimentación activa",
+                            "Consejos rápidos de mejora"
                         ]}
-                        cta="Reservar en Fiverr"
+                        cta="Reservar Básico"
                         delay={0.2}
                     />
                     <PackageCard
-                        title="Pack Subida de Rango"
-                        price="$80"
+                        title="Estándar"
+                        price="13,27€"
+                        duration="60 Minutos"
                         isPopular
                         features={[
-                            "3 sesiones de 60 minutos",
-                            "Plan de mejora personalizado",
-                            "Seguimiento de progreso semanal",
-                            "Prioridad en reservas",
-                            "Soporte directo por chat"
+                            "Sesión de coaching 1 a 1 extendida",
+                            "Análisis profundo de replays",
+                            "Bloc de notas post-sesión",
+                            "Plan de entrenamiento personalizado",
+                            "Discord opcional para seguimiento"
                         ]}
-                        cta="Ver Pack"
+                        cta="Reservar Estándar"
                         delay={0.4}
                     />
+                    <PackageCard
+                        title="Premium"
+                        price="17,70€"
+                        duration="90 Minutos"
+                        features={[
+                            "Sesión intensiva de coaching",
+                            "Análisis completo de mecánicas",
+                            "Revisión de múltiples replays",
+                            "Soporte prioritario",
+                            "Todo lo incluido en Estándar"
+                        ]}
+                        cta="Reservar Premium"
+                        delay={0.6}
+                    />
+                </div>
+
+                <div className="mt-12 text-center text-white/40 text-sm max-w-2xl mx-auto">
+                    <p>
+                        * Las cancelaciones deben realizarse con al menos 6 horas de antelación.
+                        <br />
+                        * Si no te presentas pasados 10 minutos de la hora acordada, la sesión se considerará cancelada.
+                    </p>
                 </div>
             </div>
         </section>
