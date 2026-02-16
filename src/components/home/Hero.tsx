@@ -43,9 +43,9 @@ export const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     style={{ y: y2 }}
                 >
-                    DOMINATE <br />
+                    ALCANZA <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-rocket-blue via-rocket-cyan to-white">
-                        THE FIELD
+                        TU RANGO
                     </span>
                 </motion.h1>
 
@@ -56,8 +56,8 @@ export const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     style={{ y: y1 }}
                 >
-                    1-on-1 Coaching with Grand Champion 2 Pros.<br />
-                    We play with you, fix your mistakes, and help you rank up.
+                    Coaching 1-on-1 con dos jugadores Grand Champion 2 (1600 MMR).<br />
+                    Más de 4000 horas de experiencia. Jugamos contigo, corregimos tus errores y te ayudamos a subir.
                 </motion.p>
 
                 <motion.div
@@ -66,14 +66,14 @@ export const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                 >
-                    <a href="#FIVERR_LINK" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.fiverr.com/rlboosting_es" target="_blank" rel="noopener noreferrer">
                         <Button size="lg" rightIcon={<ArrowRight size={20} />}>
-                            Book Session ($29)
+                            Reservar en Fiverr ($29)
                         </Button>
                     </a>
                     <a href="#coaching-plans">
                         <Button variant="secondary" size="lg">
-                            See Packages
+                            Ver Paquetes
                         </Button>
                     </a>
                 </motion.div>
@@ -85,7 +85,7 @@ export const Hero = () => {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
             >
-                <span className="text-xs tracking-[0.3em] uppercase">Scroll</span>
+                <span className="text-xs tracking-[0.3em] uppercase">Desplázate</span>
                 <div className="w-px h-12 bg-gradient-to-b from-rocket-cyan to-transparent" />
             </motion.div>
         </section>

@@ -23,33 +23,33 @@ export const Benefits = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-6 uppercase leading-tight">
-                            Stop Guessing.<br />
-                            <span className="text-rocket-blue">Start Climbing.</span>
+                            Deja de Adivinar.<br />
+                            <span className="text-rocket-blue">Empieza a Subir.</span>
                         </h2>
                         <p className="text-rocket-textSecondary text-lg mb-8">
-                            Watching YouTube tutorials isn't enough. You need personalized feedback on YOUR gameplay mistakes.
+                            Ver tutoriales de YouTube no es suficiente. Necesitas feedback personalizado sobre TUS errores de juego.
                         </p>
 
                         <div className="grid grid-cols-1 gap-4">
                             <BenefitItem
                                 icon={<Brain />}
                                 title="Game Sense"
-                                description="Learn exactly when to challenge, when to shadow, and how to read the play."
+                                description="Aprende exactamente cuándo desafiar, cuándo hacer shadow, y cómo leer la jugada."
                             />
                             <BenefitItem
                                 icon={<RotateCcw />}
-                                title="Rotations"
-                                description="Stop cutting off teammates. Flow seamlessly around the field."
+                                title="Rotaciones"
+                                description="Deja de cortar el camino a tus compañeros. Fluye sin problemas por el campo."
                             />
                             <BenefitItem
                                 icon={<Zap />}
-                                title="Mechanics"
-                                description="Master fast aerials, wall-drags, and recoveries with custom drills."
+                                title="Mecánicas"
+                                description="Domina aerials rápidos, wall-drags y recuperaciones con entrenamientos personalizados."
                             />
                             <BenefitItem
                                 icon={<Shield />}
-                                title="Defense"
-                                description="Become a brick wall. Backboard reads and difficult saves made easy."
+                                title="Defensa"
+                                description="Conviértete en una muralla. Lecturas de backboard y salvadas difíciles hechas fácil."
                             />
                         </div>
                     </motion.div>
@@ -63,7 +63,7 @@ export const Benefits = () => {
                         {/* Placeholder for Gameplay Image/Video */}
                         <div className="aspect-video bg-gradient-to-br from-gray-800 to-black rounded-2xl border border-white/10 shadow-2xl relative overflow-hidden group">
                             <div className="absolute inset-0 flex items-center justify-center text-white/20 font-title text-4xl uppercase">
-                                Gameplay Analysis
+                                Análisis de Gameplay
                             </div>
                             <div className="absolute inset-0 bg-rocket-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>

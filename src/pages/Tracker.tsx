@@ -20,7 +20,7 @@ export default function Tracker() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
-                            TRACK <span className="text-transparent bg-clip-text bg-gradient-to-r from-rocket-blue to-rocket-cyan">PERFORMANCE</span>
+                            TRACKER DE <span className="text-transparent bg-clip-text bg-gradient-to-r from-rocket-blue to-rocket-cyan">RENDIMIENTO</span>
                         </motion.h1>
                         <motion.p
                             className="text-gray-400 text-lg max-w-2xl"
@@ -28,12 +28,12 @@ export default function Tracker() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
                         >
-                            Analyze your competitive history, monitor MMR trends, and identify improvement areas.
+                            Analiza tu historial competitivo, monitorea tendencias de MMR e identifica áreas de mejora.
                         </motion.p>
                     </div>
 
                     <div className="flex gap-2">
-                        {['1W', '1M', '3M', 'ALL'].map((period, i) => (
+                        {['1S', '1M', '3M', 'TODO'].map((period, i) => (
                             <button
                                 key={period}
                                 className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${i === 1 ? 'bg-rocket-cyan text-rocket-dark' : 'bg-white/5 text-white/50 hover:bg-white/10 hover:text-white'}`}
@@ -55,10 +55,10 @@ export default function Tracker() {
                             transition={{ delay: 0.3 }}
                         >
                             <div className="flex justify-between items-center mb-6">
-                                <h2 className="font-title font-bold text-2xl text-white">MMR History</h2>
+                                <h2 className="font-title font-bold text-2xl text-white">Historial MMR</h2>
                                 <div className="flex items-center gap-2">
                                     <span className="text-green-400 font-bold font-mono text-lg">+102</span>
-                                    <span className="text-gray-400 text-xs uppercase">This Month</span>
+                                    <span className="text-gray-400 text-xs uppercase">Este Mes</span>
                                 </div>
                             </div>
                             <MMRChart />
@@ -67,9 +67,9 @@ export default function Tracker() {
                         {/* Quick Stats Row */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
-                                { label: 'Current Rank', value: 'GC II', icon: <Trophy size={20} className="text-rocket-orange" />, sub: 'Div IV', progress: 85, color: 'bg-rocket-orange' },
-                                { label: 'Matches', value: '1,248', icon: <Gamepad2 size={20} className="text-rocket-blue" />, sub: '+12 this week', progress: 60, color: 'bg-rocket-blue' },
-                                { label: 'Shooting %', value: '42.8%', icon: <Target size={20} className="text-rocket-cyan" />, sub: 'Top 8%', progress: 42, color: 'bg-rocket-cyan' },
+                                { label: 'Rango Actual', value: 'GC II', icon: <Trophy size={20} className="text-rocket-orange" />, sub: 'Div IV', progress: 85, color: 'bg-rocket-orange' },
+                                { label: 'Partidas', value: '1,248', icon: <Gamepad2 size={20} className="text-rocket-blue" />, sub: '+12 esta semana', progress: 60, color: 'bg-rocket-blue' },
+                                { label: '% Tiro', value: '42.8%', icon: <Target size={20} className="text-rocket-cyan" />, sub: 'Top 8%', progress: 42, color: 'bg-rocket-cyan' },
                             ].map((stat, i) => (
                                 <motion.div
                                     key={i}
@@ -114,12 +114,12 @@ export default function Tracker() {
                                 <div className="text-center">
                                     <div className="w-3 h-3 rounded-full bg-rocket-cyan mx-auto mb-2 shadow-[0_0_10px_#00D9FF]" />
                                     <span className="block font-bold text-xl text-white">62</span>
-                                    <span className="text-xs text-gray-400 uppercase">Wins</span>
+                                    <span className="text-xs text-gray-400 uppercase">Victorias</span>
                                 </div>
                                 <div className="text-center">
                                     <div className="w-3 h-3 rounded-full bg-rocket-orange mx-auto mb-2 shadow-[0_0_10px_#FF6B00]" />
                                     <span className="block font-bold text-xl text-white">38</span>
-                                    <span className="text-xs text-gray-400 uppercase">Losses</span>
+                                    <span className="text-xs text-gray-400 uppercase">Derrotas</span>
                                 </div>
                             </div>
                         </motion.div>

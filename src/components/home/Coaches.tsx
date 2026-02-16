@@ -24,15 +24,15 @@ const CoachProfile = ({ name, rank, hours, experience, style, delay }: any) => (
 
         <div className="space-y-4 mb-6">
             <div className="flex items-center justify-between text-sm">
-                <span className="text-white/60 flex items-center gap-2"><Trophy size={14} /> Rank Peak</span>
+                <span className="text-white/60 flex items-center gap-2"><Trophy size={14} /> Rango Máximo</span>
                 <span className="text-white font-bold">{rank}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
-                <span className="text-white/60 flex items-center gap-2"><Clock size={14} /> Hours Played</span>
+                <span className="text-white/60 flex items-center gap-2"><Clock size={14} /> Horas Jugadas</span>
                 <span className="text-white font-bold">{hours}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
-                <span className="text-white/60 flex items-center gap-2"><Star size={14} /> Experience</span>
+                <span className="text-white/60 flex items-center gap-2"><Star size={14} /> Experiencia</span>
                 <span className="text-white font-bold">{experience}</span>
             </div>
         </div>
@@ -52,28 +52,28 @@ export const Coaches = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Meet Your Coaches
+                        Conoce a tus Coaches
                     </motion.h2>
                     <p className="text-rocket-textSecondary max-w-2xl mx-auto">
-                        Learn from the best. Our GC2-ranked coaches have thousands of hours of experience to help you climb.
+                        Aprende de los mejores. Nuestros coaches con rango GC2 tienen miles de horas de experiencia para ayudarte a escalar.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <CoachProfile
                         name="Coach Alpha"
-                        rank="Grand Champion 2 (1650 MMR)"
+                        rank="Grand Champion 2 (1600 MMR)"
                         hours="4000+"
-                        experience="9 Years"
-                        style="Analytical & Strategic. I teach you to think before you fly."
+                        experience="9 Años"
+                        style="Analítico y estratégico. Te enseño a pensar antes de volar."
                         delay={0.2}
                     />
                     <CoachProfile
                         name="Coach Bravo"
-                        rank="Grand Champion 2 (1630 MMR)"
-                        hours="3800+"
-                        experience="9 Years"
-                        style="Mechanics & Rotation. We polish your car and ball control."
+                        rank="Grand Champion 2 (1600 MMR)"
+                        hours="4000+"
+                        experience="9 Años"
+                        style="Mecánicas y rotaciones. Pulimos tu control del coche y del balón."
                         delay={0.4}
                     />
                 </div>

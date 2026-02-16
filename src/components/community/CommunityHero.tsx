@@ -21,7 +21,7 @@ export const CommunityHero = () => {
                     className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rocket-cyan/30 bg-rocket-cyan/10 text-rocket-cyan text-sm font-bold uppercase tracking-wider backdrop-blur-md"
                 >
                     <span className="w-2 h-2 rounded-full bg-rocket-cyan animate-pulse" />
-                    Join 12,472 Active Members
+                    Únete a 12,472 Miembros Activos
                 </motion.div>
 
                 <motion.h1
@@ -30,8 +30,8 @@ export const CommunityHero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    The Ultimate <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5865F2] to-rocket-cyan">Rocket League Hub</span>
+                    El Hub Definitivo <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5865F2] to-rocket-cyan">De Rocket League</span>
                 </motion.h1>
 
                 <motion.p
@@ -40,8 +40,8 @@ export const CommunityHero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    Connect with players, find teammates, and compete in weekly tournaments.
-                    The community that levels up together.
+                    Conecta con jugadores, encuentra compañeros y compite en torneos semanales.
+                    La comunidad que sube de nivel junta.
                 </motion.p>
 
                 <motion.div
@@ -50,10 +50,10 @@ export const CommunityHero = () => {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <Button variant="discord" size="lg" leftIcon={<Gamepad2 size={24} />} className="text-xl px-12 py-5">
-                        Join Discord Server
+                        Unirse al Discord
                     </Button>
                     <p className="mt-4 text-white/40 text-sm">
-                        Free to join • Instant access • 24/7 Support
+                        Gratis • Acceso Inmediato • Soporte 24/7
                     </p>
                 </motion.div>
             </div>

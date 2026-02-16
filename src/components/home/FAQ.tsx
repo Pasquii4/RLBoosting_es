@@ -38,24 +38,28 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 export const FAQ = () => {
     const faqs = [
         {
-            question: "How does replay analysis work?",
-            answer: "We use advanced AI and computer vision to analyze your gameplay frame-by-frame. We identify positioning errors, rotation mistakes, and mechanical inefficiencies, comparing your playstyle against SSL-level data to provide actionable feedback."
+            question: "¿Qué rango necesito para recibir coaching?",
+            answer: "Trabajamos con jugadores de todos los rangos, desde Bronze hasta Grand Champion. Nuestro coaching se adapta a tu nivel actual y objetivos específicos."
         },
         {
-            question: "What rank do I need to be to join?",
-            answer: "RLCOACH is designed for players of all ranks! Whether you're a Bronze beginner looking to learn the basics or a Grand Champion aiming for SSL, our tools and community adapt to your skill level."
+            question: "¿Cómo funciona una sesión de coaching?",
+            answer: "Reservas tu sesión en Fiverr, coordinamos un horario por Discord, y luego tenemos una sesión de 60 minutos donde jugamos juntos o analizamos tus replays en tiempo real con feedback por voz."
         },
         {
-            question: "What's included in live coaching?",
-            answer: "Live coaching sessions include real-time gameplay review, mechanic drills, mentality coaching, and personalized improvement plans. You'll hop into a private Discord call with a verified SSL coach who will guide you through your session."
+            question: "¿Qué incluye el coaching 1-on-1?",
+            answer: "Cada sesión incluye análisis de gameplay en vivo, corrección de errores en tiempo real, entrenamientos de mecánicas, coaching de mentalidad, y notas personalizadas post-sesión con un plan de mejora."
         },
         {
-            question: "Can I cancel my subscription anytime?",
-            answer: "Yes, absolutely. You can cancel your subscription at any time from your account settings. You'll retain access to premium features until the end of your billing period."
+            question: "¿Puedo cancelar o reprogramar mi sesión?",
+            answer: "Sí. Ofrecemos cancelación gratuita hasta 6 horas antes de la sesión programada. Para reprogramar, simplemente contáctanos por Discord con anticipación."
         },
         {
-            question: "Do you offer refunds?",
-            answer: "We offer a 7-day money-back guarantee for all new subscriptions. If you're not satisfied with the improvement in your gameplay, simply contact support for a full refund."
+            question: "¿Ofrecen garantía de resultados?",
+            answer: "Si bien no podemos garantizar un rango específico (depende de tu práctica), garantizamos que identificaremos exactamente qué te está frenando y te daremos un plan claro para mejorar. Si no estás satisfecho con la sesión, contáctanos para una solución."
+        },
+        {
+            question: "¿En qué idioma son las sesiones?",
+            answer: "Ofrecemos sesiones en español e inglés. Especifica tu preferencia al reservar en Fiverr o al coordinar la sesión por Discord."
         }
     ];
 
@@ -73,7 +77,7 @@ export const FAQ = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Frequently Asked Questions
+                        Preguntas Frecuentes
                     </motion.h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-rocket-cyan to-rocket-blue mx-auto rounded-full" />
                 </div>

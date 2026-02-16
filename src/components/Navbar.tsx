@@ -23,10 +23,10 @@ export const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/', icon: <Home size={18} /> },
+        { name: 'Inicio', path: '/', icon: <Home size={18} /> },
         { name: 'Coaching', path: '/#coaching-plans', icon: <Rocket size={18} /> },
         { name: 'Tracker', path: '/tracker', icon: <BarChart2 size={18} /> },
-        { name: 'Community', path: '/community', icon: <Users size={18} /> },
+        { name: 'Comunidad', path: '/community', icon: <Users size={18} /> },
     ];
 
     return (

@@ -18,7 +18,7 @@ const BenefitCard = ({ icon, title, desc, gradient, delay, comingSoon }: { icon:
                 </div>
                 {comingSoon && (
                     <div className="bg-black/50 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
-                        Coming Soon
+                        Próximamente
                     </div>
                 )}
             </div>
@@ -45,38 +45,38 @@ export const BenefitsGrid = () => {
         {
             icon: <Gamepad2 className="text-white w-8 h-8" />,
             title: "Coaching",
-            desc: "Get personalized feedback from SSL coaches and improve your gameplay mechanics instantly.",
+            desc: "Recibe feedback personalizado de coaches SSL y mejora tus mecánicas al instante.",
             gradient: "from-purple-600 to-indigo-900"
         },
         {
             icon: <BarChart2 className="text-white w-8 h-8" />,
-            title: "Analytics",
-            desc: "Deep dive into your match data with our advanced tracking and visualization tools.",
+            title: "Analíticas",
+            desc: "Profundiza en tus datos de partida con nuestras herramientas avanzadas de seguimiento.",
             gradient: "from-blue-500 to-cyan-900"
         },
         {
             icon: <Trophy className="text-white w-8 h-8" />,
-            title: "Tournaments",
-            desc: "Compete in weekly cash prize tournaments for all ranks, from Gold to Grand Champion.",
+            title: "Torneos",
+            desc: "Compite en torneos semanales con premios en efectivo para todos los rangos.",
             gradient: "from-orange-500 to-red-900"
         },
         {
             icon: <MessageCircle className="text-white w-8 h-8" />,
-            title: "24/7 Chat",
-            desc: "Always have someone to play with. Our active LFG channels allow you to find teammates anytime.",
+            title: "Chat 24/7",
+            desc: "Siempre tendrás con quien jugar. Nuestros canales LFG te permiten encontrar equipo.",
             gradient: "from-emerald-500 to-teal-900"
         },
         {
             icon: <Target className="text-white w-8 h-8" />,
             title: "Packs",
-            desc: "Exclusive access to premium training packs designed by pro players to master mechanics.",
+            desc: "Acceso exclusivo a packs de entrenamiento premium diseñados por pros.",
             gradient: "from-pink-500 to-rose-900",
             comingSoon: true
         },
         {
             icon: <Film className="text-white w-8 h-8" />,
-            title: "Content",
-            desc: "Submit your clips for our weekly highlights reel and get featured on our social media.",
+            title: "Contenido",
+            desc: "Envía tus clips para nuestro vídeo semanal y sal en nuestras redes sociales.",
             gradient: "from-violet-500 to-fuchsia-900",
             comingSoon: true
         }
@@ -91,8 +91,8 @@ export const BenefitsGrid = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">Member Benefits</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">Everything you need to take your Rocket League career to the next level.</p>
+                    <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">Beneficios de Miembros</h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">Todo lo que necesitas para llevar tu carrera en Rocket League al siguiente nivel.</p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

@@ -26,8 +26,8 @@ export const Process = () => {
         <section className="py-24 bg-gradient-to-b from-rocket-dark to-[#0B1120] relative border-t border-white/5">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-20">
-                    <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">How It Works</h2>
-                    <p className="text-rocket-textSecondary">From stuck in Diamond to ranking up in 4 simple steps.</p>
+                    <h2 className="font-title font-bold text-4xl md:text-5xl text-white mb-4 uppercase">Cómo Funciona</h2>
+                    <p className="text-rocket-textSecondary">De estar atascado en Diamante a subir de rango en 4 pasos simples.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
@@ -37,36 +37,36 @@ export const Process = () => {
                     <Step
                         number="1"
                         icon={<Calendar size={32} />}
-                        title="Book on Fiverr"
-                        description="Choose your package secure your spot via Fiverr."
+                        title="Reserva en Fiverr"
+                        description="Elige tu paquete y asegura tu lugar en Fiverr."
                         delay={0.2}
                     />
                     <Step
                         number="2"
                         icon={<MessageSquare size={32} />}
-                        title="Schedule"
-                        description="We coordinate a time that works for you via Discord."
+                        title="Coordinamos"
+                        description="Agendamos un horario que te funcione vía Discord."
                         delay={0.4}
                     />
                     <Step
                         number="3"
                         icon={<Gamepad2 size={32} />}
-                        title="Play & Learn"
-                        description="1-on-1 session. We play together and fix errors live."
+                        title="Juega y Aprende"
+                        description="Sesión 1-on-1. Jugamos juntos y corregimos errores en vivo."
                         delay={0.6}
                     />
                     <Step
                         number="4"
                         icon={<TrendingUp size={32} />}
-                        title="Improve"
-                        description="Receive personalized notes and a training plan."
+                        title="Mejora"
+                        description="Recibes notas personalizadas y un plan de entrenamiento."
                         delay={0.8}
                     />
                 </div>
 
                 <div className="mt-16 text-center bg-white/5 rounded-xl p-6 max-w-2xl mx-auto border border-white/10">
                     <p className="text-sm text-white/70">
-                        <span className="text-rocket-orange font-bold">Policy:</span> Free cancellation up to 6 hours before. We wait max 10 mins for no-shows.
+                        <span className="text-rocket-orange font-bold">Política:</span> Cancelación gratuita hasta 6 horas antes. Esperamos máximo 10 minutos en caso de ausencia.
                     </p>
                 </div>
             </div>

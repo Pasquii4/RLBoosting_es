@@ -42,7 +42,7 @@ export const Testimonials = () => {
             name: "John D.",
             rank: "Grand Champion I",
             change: "Diamond III → GC I",
-            quote: "This coaching changed my game completely. I went from being stuck in Diamond for 3 seasons to hitting GC in just 2 months.",
+            quote: "Este coaching cambió mi juego por completo. Pasé de estar estancado en Diamante por 3 temporadas a llegar a GC en solo 2 meses.",
             avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&h=100&fit=crop",
             stars: 5
         },
@@ -50,7 +50,7 @@ export const Testimonials = () => {
             name: "Sarah K.",
             rank: "Champion II",
             change: "Platinum II → Champ II",
-            quote: "The replay analysis tool is insane. Seeing my rotation mistakes visualized frame-by-frame made it so easy to fix them.",
+            quote: "La herramienta de análisis de repeticiones es una locura. Ver mis errores de rotación visualizados frame a frame lo hizo muy fácil de corregir.",
             avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
             stars: 5
         },
@@ -58,7 +58,7 @@ export const Testimonials = () => {
             name: "Mike T.",
             rank: "SSL",
             change: "GC III → SSL",
-            quote: "Breaking through to SSL is all about consistency. The daily drills and mindset coaching helped me perform under pressure.",
+            quote: "Llegar a SSL se trata de consistencia. Los entrenamientos diarios y el coaching de mentalidad me ayudaron a rendir bajo presión.",
             avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop",
             stars: 5
         },
@@ -66,7 +66,7 @@ export const Testimonials = () => {
             name: "Alex R.",
             rank: "Diamond III",
             change: "Gold III → Diamond III",
-            quote: "I never thought I'd get past Gold. The mechanics packs are structured perfectly for progression.",
+            quote: "Nunca pensé que pasaría de Oro. Los packs de mecánicas están perfectamente estructurados para progresar.",
             avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop",
             stars: 4
         }
@@ -119,9 +119,9 @@ export const Testimonials = () => {
         <section className="py-24 bg-rocket-dark border-t border-white/5 relative overflow-hidden">
             <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
-                    <h2 className="font-title font-bold text-4xl text-white uppercase text-center md:text-left mb-2">Success Stories</h2>
+                    <h2 className="font-title font-bold text-4xl text-white uppercase text-center md:text-left mb-2">Historias de Éxito</h2>
                     <p className="text-gray-400 text-center md:text-left max-w-lg">
-                        Join thousands of players who have leveled up their game with RLCOACH.
+                        Únete a miles de jugadores que han subido de nivel con RLCOACH.
                     </p>
                 </div>
 
@@ -175,8 +175,8 @@ export const Testimonials = () => {
                             key={i}
                             onClick={() => goToSlide(i)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${i === activeIndex
-                                    ? 'bg-rocket-cyan w-8'
-                                    : 'bg-white/20 hover:bg-white/40'
+                                ? 'bg-rocket-cyan w-8'
+                                : 'bg-white/20 hover:bg-white/40'
                                 }`}
                             aria-label={`Go to slide ${i + 1}`}
                         />

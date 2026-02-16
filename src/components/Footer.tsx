@@ -22,7 +22,7 @@ export const Footer = () => {
                             </span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            Elevate your Rocket League gameplay with professional coaching, advanced analytics, and a thriving community.
+                            Mejora tu juego en Rocket League con coaching profesional, análisis avanzado y una comunidad activa.
                         </p>
                         <div className="flex gap-4">
                             {[
@@ -43,13 +43,13 @@ export const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-title font-bold text-lg text-white mb-6 uppercase tracking-wider">Quick Links</h4>
+                        <h4 className="font-title font-bold text-lg text-white mb-6 uppercase tracking-wider">Enlaces Rápidos</h4>
                         <ul className="space-y-3">
                             {[
-                                { name: 'Home', path: '/' },
+                                { name: 'Inicio', path: '/' },
                                 { name: 'Tracker', path: '/tracker' },
-                                { name: 'Community', path: '/community' },
-                                { name: 'Pricing', path: '/pricing' }
+                                { name: 'Comunidad', path: '/community' },
+                                { name: 'Precios', path: '/pricing' }
                             ].map((link) => (
                                 <li key={link.path}>
                                     <NavLink
@@ -67,7 +67,7 @@ export const Footer = () => {
                     <div>
                         <h4 className="font-title font-bold text-lg text-white mb-6 uppercase tracking-wider">Legal</h4>
                         <ul className="space-y-3">
-                            {['Privacy Policy', 'Terms of Service', 'Refund Policy', 'Cookie Policy'].map((item) => (
+                            {['Política de Privacidad', 'Términos de Servicio', 'Política de Reembolso', 'Política de Cookies'].map((item) => (
                                 <li key={item}>
                                     <a href="#" className="text-gray-400 hover:text-rocket-cyan transition-colors duration-300 text-sm">
                                         {item}
@@ -79,29 +79,29 @@ export const Footer = () => {
 
                     {/* Newsletter */}
                     <div>
-                        <h4 className="font-title font-bold text-lg text-white mb-6 uppercase tracking-wider">Stay Updated</h4>
+                        <h4 className="font-title font-bold text-lg text-white mb-6 uppercase tracking-wider">Mantente al día</h4>
                         <p className="text-gray-400 text-sm mb-4">
-                            Get weekly tips and exclusive coaching offers.
+                            Recibe consejos semanales y ofertas de coaching exclusivas.
                         </p>
                         <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                             <input
                                 type="email"
-                                placeholder="Enter your email"
+                                placeholder="Introduce tu email"
                                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-rocket-cyan/50 focus:bg-white/10 transition-all font-body text-sm"
                             />
                             <Button size="sm" className="w-full">
-                                Subscribe
+                                Suscribirse
                             </Button>
                         </form>
                     </div>
                 </div>
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                    <p>© 2026 RLCOACH. All rights reserved.</p>
+                    <p>© 2026 RLCOACH. Todos los derechos reservados.</p>
                     <div className="flex items-center gap-2">
-                        <span>Made with</span>
+                        <span>Creado con</span>
                         <Heart className="w-3 h-3 text-rocket-orange fill-rocket-orange animate-pulse" />
-                        <span>in Barcelona</span>
+                        <span>en Barcelona</span>
                     </div>
                 </div>
             </div>
